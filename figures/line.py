@@ -37,5 +37,6 @@ def main():
     except ValueError:
         print("Entrada inválida. Asegúrese de ingresar números enteros separados por coma.")
 
+
 if __name__ == "__main__":
     main()
