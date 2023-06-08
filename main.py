@@ -1,13 +1,13 @@
 def frame() :
   rows = 22
-  columnas = 22
+  columnas = 21
 
   for i in range(rows) :
     for j in range(columnas) :
       if i == 0 or i == (rows-1) or j == 0 or j == (columnas-1) :
         if i == 0 or i == (rows-1) :
-          if j == 0 or j == (columnas-1) :
-            print("      ", end='')
+          if j == 0:
+            print("     ", end='')
           else :
             print(f" {j}", end='')
         elif j == 0 or j == (columnas-1) :

@@ -6,7 +6,7 @@ columnas = int(input("Numero de columnas: "))
 for i in range(rows) :
   for j in range(columnas) :
     if i == 0 or i == (rows-1) or j == 0 or j == (columnas-1) :
-      print("*", end='')
+      print("* ", end='')
     else :
-      print(" ", end='')
+      print("  ", end='')
   print()
