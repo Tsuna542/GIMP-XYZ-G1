@@ -1,4 +1,4 @@
-def draw_line(Pi, Pf):
+def dibujar_linea(Pi, Pf):
     x1, y1 = Pi
     x2, y2 = Pf
 
@@ -6,7 +6,7 @@ def draw_line(Pi, Pf):
     dy = abs(y2 - y1)
 
     if dx == 0 and dy == 0:  # Los puntos son iguales
-        print("No se puede representar una línea. Los puntos son iguales.")
+        print("Invalid Operation")
     elif dx == 0:  # La línea es vertical
         for y in range(min(y1, y2), max(y1, y2) + 1):
             print("*")
@@ -23,20 +23,19 @@ def draw_line(Pi, Pf):
             elif x1 > x2 and y1 < y2:
                 print(" " * i + "*")
     else:  # La línea no es recta
-        print("No se puede representar una línea recta.")
+        print("Invalid Operation")
 
 def main():
-    try:
-        x1, y1 = map(int, input("Ingrese las coordenadas del punto inicial (Pi): ").split(','))
-        x2, y2 = map(int, input("Ingrese las coordenadas del punto final (Pf): ").split(','))
+    try: # Solicitar datos
+        x1, y1 = map(int, input("Puntos Iniciales (Pi): ").split(','))
+        x2, y2 = map(int, input("Puntos Finales (Pf): ").split(','))
 
         Pi = (x1, y1)
         Pf = (x2, y2)
 
-        draw_line(Pi, Pf)
+        dibujar_linea(Pi, Pf)
     except ValueError:
-        print("Entrada inválida. Asegúrese de ingresar números enteros separados por coma.")
-
+        print("Invalid Operation")
 
 if __name__ == "__main__":
     main()
